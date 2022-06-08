@@ -1,30 +1,19 @@
 import React, { FC, useState } from 'react'
 import { useMutation, useQuery } from 'react-apollo'
-// import { FormattedMessage } from 'react-intl'
 import { Layout, PageBlock, PageHeader, Input, Button, Spinner } from 'vtex.styleguide'
 import saveTokenGQL from './graphql/saveToken.gql'
-import saveConfigGQL from './graphql/saveConfig.gql'
 import getTokenGQL from './graphql/getToken.gql'
-import getConfigGQL from './graphql/getConfig.gql'
 
 const AdminTwitter: FC = () => {
   const [token, setToken] = useState('')
-  const [searchTerm, setSearchTerm] = useState('')
   const [isLoading, setLoading] = useState(true)
+  
   useQuery(getTokenGQL, { onCompleted: ({ token }) => {
     setToken(token)
     setLoading(false)
   }})
-  useQuery(getConfigGQL, { onCompleted: ({ config }) => {
-    console.log("config", config)
-    setSearchTerm(config.searchTerm)
-    setLoading(false)
-  }})
+
   const [saveToken] = useMutation(saveTokenGQL, {
-    onCompleted: () =>
-      setLoading(false)
-  })
-  const [saveConfig] = useMutation(saveConfigGQL, {
     onCompleted: () =>
       setLoading(false)
   })
@@ -53,21 +42,12 @@ const AdminTwitter: FC = () => {
           onChange={(e: any) => setToken(e.target.value)}
         />
 
-        <h5>Twitter Search Term</h5>
-
-        <Input
-          placeholder="Search Term"
-          value={searchTerm}
-          onChange={(e: any) => setSearchTerm(e.target.value)}
-        />
-
         <br />
 
         <Button
           onClick={() => {
             setLoading(true)
             saveToken({ variables: { token } })
-            saveConfig({ variables: { searchTerm } })
           }}
         >
           Save

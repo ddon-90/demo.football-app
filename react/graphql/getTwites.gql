@@ -1,5 +1,5 @@
-query getTwites {
-  search {
+query getTwites($searchTerm: String) {
+  search(searchTerm: $searchTerm) {
     text
     user {
       name

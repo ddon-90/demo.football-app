@@ -1,7 +1,7 @@
 {
-  "name": "twitter-integration",
-  "vendor": "demostore",
-  "version": "3.3.0",
+  "name": "twitter-app",
+  "vendor": "obi",
+  "version": "0.0.1",
   "title": "VTEX IO App Example",
   "description": "Reference app for VTEX IO",
   "dependencies": {
@@ -18,9 +18,6 @@
   "policies": [
     {
       "name": "colossus-fire-event"
-    },
-    {
-      "name": "OMSViewer"
     },
     {
       "name": "colossus-write-logs"

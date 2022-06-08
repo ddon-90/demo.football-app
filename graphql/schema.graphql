@@ -11,22 +11,12 @@ type Tweet {
   user: TwitterUser
 }
 
-type Config {
-  searchTerm: String
-}
-
-input ConfigInputType {
-  searchTerm: String
-}
-
 type Query {
   # Cache control can only be set at root fields
-  search: [Tweet] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+  search(searchTerm: String): [Tweet] @cacheControl(scope: PUBLIC, maxAge: SHORT)
   token: String @cacheControl(scope: PUBLIC, maxAge: SHORT)
-  config: Config @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
 
 type Mutation {
   token(token: String): String
-  config(config: ConfigInputType): String
 }

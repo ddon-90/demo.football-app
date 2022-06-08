@@ -1,6 +1,6 @@
 .tweets {
   margin: 0;
-  background-color: #F7EEED;
+  background-color: #e6f1e6;
   padding: 7px 31px;
 }
 
@@ -26,14 +26,14 @@
   width: 33%;
   padding: 60px;
   box-sizing: border-box;
-  background-color: #212221;
+  background-color: #FF7E21;
   align-items: center;
   justify-content: center;
 }
 
 .locationContainerMobile {
   padding: 20px;
-  background-color: #212221;
+  background-color: #FF7E21;
 }
 
 .location {

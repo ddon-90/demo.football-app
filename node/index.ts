@@ -6,9 +6,7 @@ import {
 } from '@vtex/api'
 
 import { Clients } from './clients'
-import { getConfig } from './resolvers/getConfig'
 import { getToken } from './resolvers/getToken'
-import { saveConfig } from './resolvers/saveConfig'
 import { saveToken } from './resolvers/saveToken'
 import { search } from './resolvers/search'
 
@@ -32,11 +30,9 @@ export default new Service<Clients, RecorderState, ParamsContext>({
   graphql: {
     resolvers: {
       Mutation: {
-        config: saveConfig,
         token: saveToken,
       },
       Query: {
-        config: getConfig,
         search,
         token: getToken,
       },

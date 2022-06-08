@@ -6,6 +6,7 @@ import styles from './TwitterCards.css'
 
 interface Props {
   title: string
+  searchTerm: string
 }
 
 interface Tweet {
@@ -15,12 +16,12 @@ interface Tweet {
   }
 }
 
-const TwitterCards = ({ title = 'News from Twitter' }: Props) => {
-  const { data, loading, error } = useQuery<{ search: Tweet[] }>(getTwites)
-  const { data: config } = useQuery<{ config: { searchTerm: string }}>(getConfig)
+const TwitterCards = ({ title = 'Twitter Title', searchTerm = 'Juventus' }: Props) => {
+  const { data, loading, error } = useQuery<{ search: Tweet[] }>(getTwites, { variables: { searchTerm } })
 
-  console.log(data)
-  console.log(error)
+  // console.log(data)
+  // console.log(error)
+
   if (loading) {
     return (
       <div>
@@ -39,10 +40,10 @@ const TwitterCards = ({ title = 'News from Twitter' }: Props) => {
       <h2 className="tc">{title}</h2>
       <div className={`db flex-ns `+`${styles.tweetsContainer}`}>
         <div className={`dn flex-ns `+`${styles.locationContainer}`}>
-          <p className={`tc f1 `+`${styles.location}`}>"{config?.config.searchTerm ?? ''}"</p>
+          <p className={`tc f1 `+`${styles.location}`}>"{searchTerm}"</p>
         </div>
         <div className={`db dn-m `+`${styles.locationContainerMobile}`}>
-          <p className={`tc f2 `+`${styles.location}`}>"{config?.config.searchTerm ?? ''}"</p>
+          <p className={`tc f2 `+`${styles.location}`}>"{searchTerm}"</p>
         </div>
         <ul className={`${styles.tweets}`}>
           {firstFourTweets.map((item: Tweet, index: number) => (
@@ -68,7 +69,13 @@ TwitterCards.schema = {
       title: 'Title',
       description: 'This is the title of the Twitter Block',
       type: 'string',
-      default: null,
+      default: 'Title',
+    },
+    searchTerm: {
+      title: 'Search Term',
+      description: 'This is the search term Twitter Block',
+      type: 'string',
+      default: 'Juventus',
     },
   },
 }
