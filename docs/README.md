@@ -71,10 +71,16 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/twitter
 
 ![Twitter App](./images/twitter-app-3.png)
 
-10. Navigate to the Storefront and show the new Twitter component on the homepage
+11. Link the Store theme
+
+```
+vtex link
+```
+
+12. Navigate to the Storefront and show the new Twitter component on the homepage
 
 ![Twitter App](./images/twitter-app-4.png)
 
-11. Open the Site Editor and show that we can edit the configuration of the Twitter App front-end component
+13. Open the Site Editor and show that we can edit the configuration of the Twitter App front-end component
 
 ![Twitter App](./images/twitter-app-5.png)
