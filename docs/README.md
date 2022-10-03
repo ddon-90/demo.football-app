@@ -71,7 +71,7 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/twitter
 
 ![Twitter App](./images/twitter-app-3.png)
 
-11. Link the Store theme
+11. Link the Store theme project
 
 ```
 vtex link
