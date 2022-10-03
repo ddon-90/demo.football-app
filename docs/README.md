@@ -84,3 +84,4 @@ vtex link
 13. Open the Site Editor and show that we can edit the configuration of the Twitter App front-end component
 
 ![Twitter App](./images/twitter-app-5.png)
+
