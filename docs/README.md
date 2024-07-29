@@ -1,8 +1,8 @@
 ## Name:
-Twitter App
+Football App
 
 ## Description:
-Example of custom front-end component fetching data from an external source (Twitter) manageable via VTEX CMS (Site Editor).
+Example of custom front-end component fetching data from an external source (Sportmonks) manageable via VTEX CMS (Site Editor).
 
 ## Proof points:
 - Front-end customization
@@ -31,11 +31,11 @@ vtex use {{workspace}}
 
 ```
 {
-  "name": "twitter-app",
+  "name": "football-app",
   "vendor": "{{account}}",
   "version": "0.0.1",
-  "title": "Twitter App",
-  "description": "Example of custom front-end component fetching data from an external source (Twitter) manageable via VTEX CMS (Site Editor).",
+  "title": "Football App",
+  "description": "Example of custom front-end component fetching data from an external source (Sportmonks) manageable via VTEX CMS (Site Editor).",
   "mustUpdateAt": "2018-01-04",
   ...
   ...
@@ -53,23 +53,23 @@ vtex link
 ```
 Navigate to:
 
-https://{{workspace}}--{{account}}.myvtex.com/admin/twitter
+https://{{workspace}}--{{account}}.myvtex.com/admin/football
 
 ```
 
-![Twitter App](./images/twitter-app-1.png)
+![Football App](./images/twitter-app-1.png)
 
-7. Input a valid "Twitter API Token", eg. `Bearer ****************` and save. (You can find a valid one [here](https://docs.google.com/document/d/1rXFcquMX0I5IGXaLs7jxUeTez1utJut1JOCSORaLo40/edit?usp=sharing))
+7. Input a valid "Sportmonks API Token", eg. `****************` and save. (You can find a valid one [here](https://docs.google.com/document/d/1rXFcquMX0I5IGXaLs7jxUeTez1utJut1JOCSORaLo40/edit?usp=sharing))
 
 8. Download the [VTEX Store theme](https://github.com/vtex-apps/store-theme) or another store theme of your choice
 
-9. Add the Twitter App as peer dependency on the Store theme `manifest.json` file
+9. Add the Football App as peer dependency on the Store theme `manifest.json` file
 
-![Twitter App](./images/twitter-app-2.png)
+![Football App](./images/twitter-app-2.png)
 
-10. Add the Twitter App front-end component on the Store theme `homepage.jsonc` file
+10. Add the Football App front-end component on the Store theme `homepage.jsonc` file
 
-![Twitter App](./images/twitter-app-3.png)
+![Football App](./images/twitter-app-3.png)
 
 11. Link the Store theme project
 
@@ -77,11 +77,11 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/twitter
 vtex link
 ```
 
-12. Navigate to the Storefront and show the new Twitter component on the homepage
+12. Navigate to the Storefront and show the new Football component on the homepage
 
-![Twitter App](./images/twitter-app-4.png)
+![Football App](./images/twitter-app-4.png)
 
 13. Open the Site Editor and show that we can edit the configuration of the Twitter App front-end component
 
-![Twitter App](./images/twitter-app-5.png)
+![Football App](./images/twitter-app-5.png)
 
