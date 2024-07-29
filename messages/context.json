@@ -1,6 +1,6 @@
 {
-  "twitter-integration.navigation.label": "Twitter App",
-  "twitter-integration.navigation.search.kws": "Twitter",
-  "editor.twitter-integration.title": "Title",
-  "editor.twitter-integration.description": "Twitter news title"
+  "football.navigation.label": "Football App",
+  "football.navigation.search.kws": "Football",
+  "editor.football.title": "Title",
+  "editor.football.description": "Football news title"
 }

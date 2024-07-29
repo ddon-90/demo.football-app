@@ -1,7 +1,8 @@
 import { IOClients } from '@vtex/api'
-import { TwitterClient } from './twitter'
+import { SportmonksClient } from './sportmonks'
+
 export class Clients extends IOClients {
-  get twitter() {
-    return this.getOrSet('twitter', TwitterClient)
+  get sportmonks() {
+    return this.getOrSet('sportmonks', SportmonksClient)
   }
 }

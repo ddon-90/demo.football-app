@@ -8,7 +8,7 @@ import {
 import { Clients } from './clients'
 import { getToken } from './resolvers/getToken'
 import { saveToken } from './resolvers/saveToken'
-import { search } from './resolvers/search'
+import { getAllTeams } from './resolvers/getAllTeams'
 
 const MEDIUM_TIMEOUT_MS = 2 * 1000
 
@@ -33,7 +33,7 @@ export default new Service<Clients, RecorderState, ParamsContext>({
         token: saveToken,
       },
       Query: {
-        search,
+        getAllTeams,
         token: getToken,
       },
     },

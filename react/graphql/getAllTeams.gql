@@ -1,0 +1,6 @@
+query getAllTeams($numberOfTeams: Int) {
+  getAllTeams(numberOfTeams: $numberOfTeams) {
+    name
+    image_path
+  }
+}

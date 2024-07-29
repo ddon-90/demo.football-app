@@ -1,24 +1,31 @@
-.tweets {
+.teams {
   margin: 0;
   background-color: #e6f1e6;
   padding: 7px 31px;
+  width: 25%;
 }
 
-.tweetsContainer {
+.teamsContainer {
   width: 100%;
   margin: 0;
   justify-content: center;
 }
 
-.tweets li {
+.teams li {
   list-style-type: none;
-  font-size: 16px;
-  line-height: 24px;
   color: #727273;
-  padding: 24px 0;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.tweets li + li {
+.teams img {
+  width: 40px;
+  height: auto;
+}
+
+.teams li + li {
   border-top: 1px #E9CDC9 solid;
 }
 

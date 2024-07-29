@@ -4,7 +4,7 @@ import { Layout, PageBlock, PageHeader, Input, Button, Spinner } from 'vtex.styl
 import saveTokenGQL from './graphql/saveToken.gql'
 import getTokenGQL from './graphql/getToken.gql'
 
-const AdminTwitter: FC = () => {
+const AdminFootball: FC = () => {
   const [token, setToken] = useState('')
   const [isLoading, setLoading] = useState(true)
   
@@ -22,7 +22,7 @@ const AdminTwitter: FC = () => {
     <Layout
       pageHeader={
         <PageHeader
-          title="Twitter Integration Setup"
+          title="Football Settings"
         />
       }
     >
@@ -34,10 +34,10 @@ const AdminTwitter: FC = () => {
           </span>
         }
 
-        <h5>Twitter API Token</h5>
+        <h5>Sportmonks API Token</h5>
 
         <Input
-          placeholder="API Token"
+          placeholder="Sportmonks API Token"
           value={token}
           onChange={(e: any) => setToken(e.target.value)}
         />
@@ -57,4 +57,4 @@ const AdminTwitter: FC = () => {
   )
 }
 
-export default AdminTwitter
+export default AdminFootball

@@ -1,5 +1,5 @@
 {
-  "twitter-cards": {
-    "component": "TwitterCards"
+  "teams-list": {
+    "component": "TeamsList"
   }
 }

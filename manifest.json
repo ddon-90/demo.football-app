@@ -1,8 +1,8 @@
 {
-  "name": "twitter-app",
-  "vendor": "obi",
+  "name": "football-app",
+  "vendor": "demoeu",
   "version": "0.0.1",
-  "title": "VTEX IO App Example",
+  "title": "Football App",
   "description": "Reference app for VTEX IO",
   "dependencies": {
     "vtex.styleguide": "9.x"
@@ -28,13 +28,24 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "api.twitter.com",
-        "path": "/1.1/search/tweets.json"
+        "host": "api.sportmonks.com",
+        "path": "/v3/football/teams"
       }
     },
     {
       "name": "vbase-read-write"
     }
   ],
+  "settingsSchema": {
+    "title": "Football App Settings",
+    "type": "object",
+    "properties": {
+      "token": {
+        "title": "Sportmonks API Token",
+        "type": "string",
+        "description": "Sportmonks API Token available at https://docs.sportmonks.com/football/welcome/authentication"
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
