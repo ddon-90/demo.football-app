@@ -10,6 +10,7 @@ Example of custom front-end component fetching data from an external source (Spo
 - External API calls
 - GraphQL on VTEX IO
 - Admin extension
+- App settings
 
 ## How to demo:
 
