@@ -29,7 +29,7 @@
       "name": "outbound-access",
       "attrs": {
         "host": "api.sportmonks.com",
-        "path": "/v3/football/teams"
+        "path": "*"
       }
     },
     {

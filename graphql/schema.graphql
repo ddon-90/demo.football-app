@@ -7,7 +7,7 @@ type Team {
 
 type Query {
   # Cache control can only be set at root fields
-  getAllTeams(numberOfTeams: Int): [Team] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+  teams(numberOfTeams: Int): [Team] @cacheControl(scope: PUBLIC, maxAge: SHORT)
   token: String @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
 

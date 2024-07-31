@@ -57,19 +57,19 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/football
 
 ```
 
-![Football App](./images/twitter-app-1.png)
+![Football App](./images/football-app-1.png)
 
-7. Input a valid "Sportmonks API Token", eg. `****************` and save. (You can find a valid one [here](https://docs.google.com/document/d/1rXFcquMX0I5IGXaLs7jxUeTez1utJut1JOCSORaLo40/edit?usp=sharing))
+7. Input a valid "Sportmonks API Token", eg. `****************` and save. (You can generate a valid one [here](https://my.sportmonks.com/register))
 
 8. Download the [VTEX Store theme](https://github.com/vtex-apps/store-theme) or another store theme of your choice
 
-9. Add the Football App as peer dependency on the Store theme `manifest.json` file
+9. Add the Football App as peer dependency on the Store theme `manifest.json` file (line 71)
 
-![Football App](./images/twitter-app-2.png)
+![Football App](./images/football-app-2.png)
 
-10. Add the Football App front-end component on the Store theme `homepage.jsonc` file
+10. Add the Football App front-end component `teams-list` on the Store theme `homepage.jsonc` file (line 14)
 
-![Football App](./images/twitter-app-3.png)
+![Football App](./images/football-app-3.png)
 
 11. Link the Store theme project
 
@@ -79,9 +79,9 @@ vtex link
 
 12. Navigate to the Storefront and show the new Football component on the homepage
 
-![Football App](./images/twitter-app-4.png)
+![Football App](./images/football-app-4.png)
 
-13. Open the Site Editor and show that we can edit the configuration of the Twitter App front-end component
+13. Open the Site Editor and show that we can edit the configuration of the Football App front-end component
 
-![Football App](./images/twitter-app-5.png)
+![Football App](./images/football-app-5.png)
 

@@ -14,23 +14,27 @@ interface Team {
 }
 
 const TeamsList = ({ title = 'Football Teams', numberOfTeams = 5 }: Props) => {
-  const { data, loading, error } = useQuery<{ getAllTeams: Team[] }>(getAllTeams, { variables: { numberOfTeams } })
+  const { data, loading, error } = useQuery<{ teams: Team[] }>(getAllTeams, { variables: { numberOfTeams } })
 
   if (loading) {
     return (
-      <div>
-        <span>Loading...</span>
+      <div className="w-80-ns w-90 mv-2 db center mt7 mb7 mw9 tc">
+        <h4>Loading...</h4>
       </div>
     )
   }
   if (error) {
-    return <h4>Error on data fetching</h4>
+    return (
+      <div className="w-80-ns w-90 mv-2 db center mt7 mb7 mw9 tc">
+        <h4>Error on data fetching</h4>
+      </div>
+    )
   }
 
-  const teams = data?.getAllTeams ?? [];
+  const teams = data?.teams ?? [];
 
   return (
-    <div className="w-80-ns w-90 mv-2 db center mt7 mw9">
+    <div className="w-80-ns w-90 mv-2 db center mt7 mb7 mw9">
       <h2 className="tc">{title}</h2>
       <div className={`db flex-ns `+`${styles.teamsContainer}`}>
         <div className={`dn flex-ns `+`${styles.locationContainer}`}>

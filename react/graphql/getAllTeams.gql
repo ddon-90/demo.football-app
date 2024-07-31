@@ -1,5 +1,5 @@
 query getAllTeams($numberOfTeams: Int) {
-  getAllTeams(numberOfTeams: $numberOfTeams) {
+  teams(numberOfTeams: $numberOfTeams) {
     name
     image_path
   }

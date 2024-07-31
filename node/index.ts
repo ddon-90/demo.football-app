@@ -33,7 +33,7 @@ export default new Service<Clients, RecorderState, ParamsContext>({
         token: saveToken,
       },
       Query: {
-        getAllTeams,
+        teams: getAllTeams,
         token: getToken,
       },
     },
