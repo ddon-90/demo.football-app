@@ -37,6 +37,7 @@ const AdminFootball: FC = () => {
         <h5>Sportmonks API Token</h5>
 
         <Input
+          type="password"
           placeholder="Sportmonks API Token"
           value={token}
           onChange={(e: any) => setToken(e.target.value)}

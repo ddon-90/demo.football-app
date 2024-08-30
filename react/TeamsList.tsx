@@ -5,6 +5,7 @@ import styles from './TeamsList.css'
 
 interface Props {
   title: string
+  backgroundColor: string
   numberOfTeams: number
 }
 
@@ -13,7 +14,7 @@ interface Team {
   image_path: string
 }
 
-const TeamsList = ({ title = 'Football Teams', numberOfTeams = 5 }: Props) => {
+const TeamsList = ({ title = 'Football Teams', backgroundColor = backgroundColors.BLUE, numberOfTeams = 5 }: Props) => {
   const { data, loading, error } = useQuery<{ teams: Team[] }>(getAllTeams, { variables: { numberOfTeams } })
 
   if (loading) {
@@ -34,14 +35,10 @@ const TeamsList = ({ title = 'Football Teams', numberOfTeams = 5 }: Props) => {
   const teams = data?.teams ?? [];
 
   return (
-    <div className="w-80-ns w-90 mv-2 db center mt7 mb7 mw9">
-      <h2 className="tc">{title}</h2>
+    <div className="mv-2 db center mt7 mb7" style={{ maxWidth: "1528px" }}>
       <div className={`db flex-ns `+`${styles.teamsContainer}`}>
-        <div className={`dn flex-ns `+`${styles.locationContainer}`}>
-          <p className={`tc f1 `+`${styles.location}`}>Football Teams</p>
-        </div>
-        <div className={`db dn-m `+`${styles.locationContainerMobile}`}>
-          <p className={`tc f2 `+`${styles.location}`}>Football Teams</p>
+        <div className={`dn flex-ns `+`${styles.locationContainer}`} style={{ backgroundColor: backgroundColor }}>
+          <p className={`tc f1 `+`${styles.location}`}>{title}</p>
         </div>
         <ul className={`${styles.teams}`}>
           {teams.map((team: Team, index: number) => (
@@ -59,6 +56,12 @@ const TeamsList = ({ title = 'Football Teams', numberOfTeams = 5 }: Props) => {
 
 }
 
+export const backgroundColors = {
+  BLUE: '#03054e',
+  ORANGE: '#ff7e21',
+  GREEN: '#37682a',
+}
+
 TeamsList.schema = {
   title: 'editor.football.title',
   description: 'editor.football.description',
@@ -70,9 +73,17 @@ TeamsList.schema = {
       type: 'string',
       default: 'Title',
     },
+    backgroundColor: {
+      title: 'editor.property.background-color.title',
+      description: 'editor.property.background-color.description',
+      type: 'string',
+      enum: Object.values(backgroundColors),
+      enumNames: Object.keys(backgroundColors),
+      default: backgroundColors.BLUE,
+    },
     numberOfTeams: {
-      title: 'Number of Teams',
-      description: 'Number of Teams to display inside the block',
+      title: "editor.property.number-of-teams.title",
+      description: "editor.property.number-of-teams.description",
       type: 'number',
       default: '5',
     },

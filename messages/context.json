@@ -2,5 +2,9 @@
   "football.navigation.label": "Football App",
   "football.navigation.search.kws": "Football",
   "editor.football.title": "Football App",
-  "editor.football.description": "Football news title"
+  "editor.football.description": "Football news title",
+  "editor.property.background-color.title": "Background color",
+  "editor.property.background-color.description": "Background color of the Block",
+  "editor.property.number-of-teams.title": "Number of Teams",
+  "editor.property.number-of-teams.description": "Number of Teams to display inside the block"
 }
