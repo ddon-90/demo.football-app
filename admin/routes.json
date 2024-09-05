@@ -1,5 +1,5 @@
 {
-  "admin.app.twitter": {
+  "admin.app.football": {
     "component": "AdminFootball",
     "path": "/admin/app/football"
   }
